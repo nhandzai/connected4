@@ -1,0 +1,57 @@
+:root{
+    --box-size: 50px
+}
+
+body {
+    background-color: #a8dadc;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+h1 {
+    margin-bottom: 20px;
+}
+
+#ground {
+    background-color: #f1faee;
+    width: calc(var(--box-size) * 7);
+    height: calc(var(--box-size) * 6);
+    display: flex;
+    flex-wrap: wrap;
+}
+#ground div {
+    width: var(--box-size);
+    height: var(--box-size);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer; 
+    border-radius: 50%;
+    background-color: #a8dadc;
+}
+
+#button-row{
+    width: calc(var(--box-size) * 7);
+    height: calc(var(--box-size) * 1);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f1faee;
+}
+#button-row div {
+    width: var(--box-size);
+    height: var(--box-size);
+    cursor: pointer; 
+    margin: 0;
+    border: 2px solid black; 
+    box-sizing: border-box;
+    background-color: #1d3557;
+    border-radius: 50%; 
+}
+
+#player{
+    font-size: 40px;
+    color: #e63946;
+}
