@@ -84,10 +84,9 @@ function checkWinner(columnNumber) {
 function resetGame() {
 
     document.querySelectorAll('#ground div').forEach(box => {
-        box.style.backgroundColor = 'a8dadc';
+        box.style.backgroundColor = '#a8dadc';
     });
 
-    turn = '#e63946';
     columnCounts = [0, 0, 0, 0, 0, 0, 0];
     table = [
         [0, 0, 0, 0, 0, 0, 0],
