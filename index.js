@@ -29,12 +29,14 @@ function highlightWinningBoxes(coordinates) {
             box.style.backgroundColor = 'black'
         }
     })
+    turn = (turn === '#e63946') ? '#457b9d' : '#e63946'
+    document.getElementById('ano-box').style.backgroundColor = turn
 }
 function changeColour(idBox,columnNumber) {
     let box = document.getElementById(idBox) 
     if (box) {
         box.style.backgroundColor = turn
-
+        turn = (turn === '#e63946') ? '#457b9d' : '#e63946'
         table[columnCounts[columnNumber - 1]][columnNumber - 1] = (turn === '#e63946') ? 2 : 1
         columnCounts[columnNumber - 1] += 1
         const winningCoordinates = checkWinner(columnNumber)
@@ -49,7 +51,7 @@ function changeColour(idBox,columnNumber) {
     } else {
         console.error(`Element with id "${idBox}" not found.`)
     }
-    turn = (turn === '#e63946') ? '#457b9d' : '#e63946'
+    
 }
 
 function checkWinner(columnNumber) {
@@ -124,7 +126,8 @@ function resetGame() {
         [0, 0, 0, 0, 0, 0, 0]
     ];
     end = false
-    document.getElementById('player').innerText = 'Player turn';
-    document.getElementById('player').style.color = turn;
+    document.getElementById('player').innerText = 'Player turn'
+    document.getElementById('player').style.color = turn
+    document.getElementById('ano-box').style.backgroundColor = turn
 }
 
